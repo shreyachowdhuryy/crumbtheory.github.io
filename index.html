@@ -1,196 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Crumb Theory Bakery</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crumb Theory Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    /* Color palette */
-    :root {
-      --bg-color: #F7EDE2;
-      --accent-color: #D87C63;
-      --text-color: #4A403A;
-      --button-text-color: #fff;
-      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
     body {
+      font-family: 'Quicksand', sans-serif;
       margin: 0;
-      font-family: var(--font-family);
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
+      background-color: #F7EDE2;
+      color: #4A403A;
     }
-    header {
-      background-color: var(--accent-color);
-      padding: 1rem 2rem;
-      color: var(--button-text-color);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .menu-container {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-    header h1 {
-      margin: 0;
-      font-weight: 600;
-      font-size: 1.5rem;
+    .menu-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .menu-header h1 {
+      font-size: 2.5rem;
+      color: #D87C63;
       letter-spacing: 2px;
     }
-    nav a {
-      color: var(--button-text-color);
-      text-decoration: none;
-      margin-left: 1.5rem;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: opacity 0.3s;
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
     }
-    nav a:hover {
-      opacity: 0.7;
-    }
-    .hero {
-      padding: 6rem 2rem 4rem;
-      text-align: center;
-      background-color: #F2E6DB;
-    }
-    .hero h2 {
-      font-size: 3rem;
-      margin-bottom: 0.3rem;
-      font-weight: 700;
-      letter-spacing: 3px;
-    }
-    .hero p {
-      font-size: 1.25rem;
-      margin-top: 0;
-      color: #6b5b4a;
-      margin-bottom: 1.5rem;
-    }
-    .btn-primary {
-      background-color: var(--accent-color);
-      color: var(--button-text-color);
-      padding: 0.75rem 2rem;
-      border: none;
-      border-radius: 30px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .btn-primary:hover {
-      background-color: #c15e4b;
-    }
-    .about, .menu-preview {
-      max-width: 700px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-    .about p {
-      font-size: 1.1rem;
-      color: #5a4f45;
+    .menu-item {
       text-align: center;
     }
-    .menu-preview h3 {
-      text-align: center;
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      letter-spacing: 1.5px;
-    }
-    .menu-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 auto;
-      max-width: 400px;
-    }
-    .menu-list li {
-      background-color: #fff;
-      margin-bottom: 1rem;
-      padding: 1rem 1.5rem;
+    .menu-item img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgb(216 124 99 / 0.2);
-      font-weight: 600;
-      color: var(--text-color);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 0.5rem;
+    }
+    .menu-item h3 {
       font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0.5rem 0 0.3rem;
     }
-    .menu-list li span {
-      display: block;
-      font-weight: 400;
-      font-size: 0.9rem;
-      color: #7d7063;
-      margin-top: 0.3rem;
-    }
-    footer {
-      background-color: var(--accent-color);
-      color: var(--button-text-color);
-      text-align: center;
-      padding: 1.5rem 1rem;
-      font-size: 0.9rem;
-      margin-top: 3rem;
-    }
-    @media (max-width: 500px) {
-      .hero h2 {
-        font-size: 2.2rem;
-      }
-      .btn-primary {
-        padding: 0.6rem 1.5rem;
-        font-size: 1rem;
-      }
+    .menu-item p {
+      font-size: 0.95rem;
+      color: #6b5b4a;
+      margin: 0;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Crumb Theory</h1>
-    <nav>
-      <a href="#menu">Menu</a>
-      <a href="#about">About</a>
-      <a href="#order">Order</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h2>Crumb Theory</h2>
-    <p>Artisan pastries made with care and curiosity.</p>
-    <a href="#menu" class="btn-primary">See Our Menu</a>
-  </section>
-
-  <section id="about" class="about">
-    <p>
-      At Crumb Theory, we blend unique flavors and artisan craftsmanship to bring you pastries that feel like a cozy moment in every bite.
-    </p>
-  </section>
-
-  <section id="menu" class="menu-preview">
-    <h3>Featured Flavors</h3>
-    <ul class="menu-list">
-      <li>
-        Guava Jam & Queso Fresco
-        <span>Sweet, tangy, and perfectly balanced.</span>
-      </li>
-      <li>
-        Burnt Honey & Sea Salt
-        <span>Rich caramel notes with a hint of ocean salt.</span>
-      </li>
-      <li>
-        Smoked Plum & Black Tea Cream
-        <span>Earthy, smoky, and soothing.</span>
-      </li>
-      <li>
-        Yuzu Custard & Toasted Meringue
-        <span>Bright citrus with a soft, toasted finish.</span>
-      </li>
-      <li>
-        Pistachio & Halva
-        <span>Nutty, sweet, and irresistibly crunchy.</span>
-      </li>
-    </ul>
-    <p style="text-align:center; margin-top: 1rem;">
-      <a href="#order" class="btn-primary">Explore Full Menu & Order</a>
-    </p>
-  </section>
-
-  <footer>
-    <p>© 2025 Crumb Theory | Contact: <a href="mailto:hello@crumbtheory.com" style="color: #fff; text-decoration: underline;">hello@crumbtheory.com</a></p>
-  </footer>
+  <div class="menu-container">
+    <div class="menu-header">
+      <h1>Crumb Theory Menu</h1>
+      <p>Artisan pastries made with care and curiosity</p>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="img/guava.jpg" alt="Guava Jam & Queso Fresco">
+        <h3>Guava Jam & Queso Fresco</h3>
+        <p>Sweet, tangy, and perfectly balanced.</p>
+      </div>
+      <div class="menu-item">
+        <img src="img/honey.jpg" alt="Burnt Honey & Sea Salt">
+        <h3>Burnt Honey & Sea Salt</h3>
+        <p>Rich caramel notes with a hint of ocean salt.</p>
+      </div>
+      <div class="menu-item">
+        <img src="img/plum.jpg" alt="Smoked Plum & Black Tea Cream">
+        <h3>Smoked Plum & Black Tea Cream</h3>
+        <p>Earthy, smoky, and soothing.</p>
+      </div>
+      <div class="menu-item">
+        <img src="img/yuzu.jpg" alt="Yuzu Custard & Toasted Meringue">
+        <h3>Yuzu Custard & Toasted Meringue</h3>
+        <p>Bright citrus with a soft, toasted finish.</p>
+      </div>
+      <div class="menu-item">
+        <img src="img/pistachio.jpg" alt="Pistachio & Halva">
+        <h3>Pistachio & Halva</h3>
+        <p>Nutty, sweet, and irresistibly crunchy.</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
