@@ -3,91 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crumb Theory Menu</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <title>Crumb Theory Bakery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Quicksand', sans-serif;
       margin: 0;
-      background-color: #F7EDE2;
-      color: #4A403A;
+      padding: 0;
+      background-color: #f7f2e8;
+      font-family: 'Libre Baskerville', serif;
+      color: #2e2e2e;
     }
-    .menu-container {
-      max-width: 1000px;
+    .menu-wrapper {
+      max-width: 900px;
       margin: 3rem auto;
-      padding: 1rem;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      background-color: #fdfbf7;
+      border: 6px double #1e2a38;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      background-image: url(''); /* Optional: add subtle paper texture */
     }
-    .menu-header {
+    h1 {
       text-align: center;
-      margin-bottom: 2rem;
+      font-size: 2.75rem;
+      color: #1e2a38;
+      margin-bottom: 0.5rem;
     }
-    .menu-header h1 {
-      font-size: 2.5rem;
-      color: #D87C63;
-      letter-spacing: 2px;
+    h2 {
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: normal;
+      margin-bottom: 2.5rem;
+      color: #444;
     }
     .menu-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem 1.5rem;
     }
     .menu-item {
-      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
     .menu-item img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      margin-bottom: 0.5rem;
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+    }
+    .menu-item div {
+      flex: 1;
     }
     .menu-item h3 {
+      margin: 0;
       font-size: 1.1rem;
-      font-weight: 600;
-      margin: 0.5rem 0 0.3rem;
+      color: #1e2a38;
     }
     .menu-item p {
-      font-size: 0.95rem;
-      color: #6b5b4a;
-      margin: 0;
+      margin: 0.3rem 0 0;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    @media (max-width: 600px) {
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="menu-container">
-    <div class="menu-header">
-      <h1>Crumb Theory Menu</h1>
-      <p>Artisan pastries made with care and curiosity</p>
-    </div>
+  <div class="menu-wrapper">
+    <h1>Crumb Theory</h1>
+    <h2>Artisan pastries made with care and curiosity</h2>
     <div class="menu-grid">
       <div class="menu-item">
         <img src="img/guava.jpg" alt="Guava Jam & Queso Fresco">
-        <h3>Guava Jam & Queso Fresco</h3>
-        <p>Sweet, tangy, and perfectly balanced.</p>
+        <div>
+          <h3>Guava Jam & Queso Fresco</h3>
+          <p>Sweet, tangy, and perfectly balanced.</p>
+        </div>
       </div>
       <div class="menu-item">
         <img src="img/honey.jpg" alt="Burnt Honey & Sea Salt">
-        <h3>Burnt Honey & Sea Salt</h3>
-        <p>Rich caramel notes with a hint of ocean salt.</p>
+        <div>
+          <h3>Burnt Honey & Sea Salt</h3>
+          <p>Rich caramel notes with a hint of ocean salt.</p>
+        </div>
       </div>
       <div class="menu-item">
         <img src="img/plum.jpg" alt="Smoked Plum & Black Tea Cream">
-        <h3>Smoked Plum & Black Tea Cream</h3>
-        <p>Earthy, smoky, and soothing.</p>
+        <div>
+          <h3>Smoked Plum & Black Tea Cream</h3>
+          <p>Earthy, smoky, and soothing.</p>
+        </div>
       </div>
       <div class="menu-item">
         <img src="img/yuzu.jpg" alt="Yuzu Custard & Toasted Meringue">
-        <h3>Yuzu Custard & Toasted Meringue</h3>
-        <p>Bright citrus with a soft, toasted finish.</p>
+        <div>
+          <h3>Yuzu Custard & Toasted Meringue</h3>
+          <p>Bright citrus with a soft, toasted finish.</p>
+        </div>
       </div>
       <div class="menu-item">
         <img src="img/pistachio.jpg" alt="Pistachio & Halva">
-        <h3>Pistachio & Halva</h3>
-        <p>Nutty, sweet, and irresistibly crunchy.</p>
+        <div>
+          <h3>Pistachio & Halva</h3>
+          <p>Nutty, sweet, and irresistibly crunchy.</p>
+        </div>
       </div>
     </div>
   </div>
