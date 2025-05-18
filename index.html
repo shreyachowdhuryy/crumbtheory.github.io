@@ -16,108 +16,96 @@
       justify-content: center;
     }
     .menu-wrapper {
-      background-color: #fdfbf7;
-      width: 800px;
-      border: 5px double #1e2a38;
-      border-radius: 0.5rem;
-      padding: 3rem 2.5rem;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      background-color: #f7e9d1;
+      width: 700px;
+      border: 3px solid #1e2a38;
+      border-radius: 20px;
+      padding: 2.5rem 2rem 3rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
     }
     h1 {
       text-align: center;
-      font-size: 3rem;
+      font-size: 2.75rem;
       color: #1e2a38;
       margin-bottom: 0.2rem;
     }
     h2 {
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: normal;
       color: #555;
       margin-bottom: 2.5rem;
     }
-    .menu-list {
+    .menu-section {
       display: flex;
       flex-direction: column;
-      gap: 2.5rem;
+      gap: 2.25rem;
     }
     .menu-item {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
     }
     .menu-item img {
-      width: 120px;
-      height: auto;
-      border-radius: 0.5rem;
-      object-fit: cover;
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      background-color: transparent;
     }
     .menu-item .text {
-      max-width: 70%;
+      width: 75%;
     }
     .menu-item h3 {
       margin: 0;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       color: #1e2a38;
     }
     .menu-item p {
-      margin-top: 0.4rem;
-      font-size: 0.95rem;
+      margin: 0.3rem 0 0;
+      font-size: 0.9rem;
       color: #555;
-    }
-    @media (max-width: 768px) {
-      .menu-item {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .menu-item .text {
-        max-width: 100%;
-      }
-      .menu-item img {
-        margin-top: 1rem;
-      }
     }
   </style>
 </head>
 <body>
   <div class="menu-wrapper">
-    <h1>Crumb Theory</h1>
-    <h2>Artisan pastries made with care and curiosity</h2>
-    <div class="menu-list">
+    <h1>CRUMB THEORY</h1>
+    <h2>BAKERY</h2>
+    <div class="menu-section">
       <div class="menu-item">
+        <img src="images/guava.jpg" alt="Guava Jam & Queso Fresco">
         <div class="text">
           <h3>Guava Jam & Queso Fresco</h3>
           <p>Sweet, tangy, and perfectly balanced.</p>
         </div>
-        <img src="/mnt/data/A_photograph_showcases_a_guava_jam_and_queso_fresc.png" alt="Guava Jam & Queso Fresco">
       </div>
       <div class="menu-item">
+        <img src="images/burnt_honey.jpg" alt="Burnt Honey & Sea Salt">
         <div class="text">
           <h3>Burnt Honey & Sea Salt</h3>
           <p>Rich caramel notes with a hint of ocean salt.</p>
         </div>
-        <img src="/mnt/data/1f378e9f-fadb-442e-8f76-3825f2712fb8.png" alt="Burnt Honey & Sea Salt">
       </div>
       <div class="menu-item">
+        <img src="images/plum_tea.jpg" alt="Smoked Plum & Black Tea Cream">
         <div class="text">
           <h3>Smoked Plum & Black Tea Cream</h3>
           <p>Earthy, smoky, and soothing.</p>
         </div>
-        <img src="/mnt/data/1f378e9f-fadb-442e-8f76-3825f2712fb8.png" alt="Smoked Plum & Black Tea Cream">
       </div>
       <div class="menu-item">
+        <img src="images/yuzu_meringue.jpg" alt="Yuzu Custard & Toasted Meringue">
         <div class="text">
           <h3>Yuzu Custard & Toasted Meringue</h3>
           <p>Bright citrus with a soft, toasted finish.</p>
         </div>
-        <img src="/mnt/data/1f378e9f-fadb-442e-8f76-3825f2712fb8.png" alt="Yuzu Custard & Toasted Meringue">
       </div>
       <div class="menu-item">
+        <img src="images/pistachio_halva.jpg" alt="Pistachio & Halva">
         <div class="text">
           <h3>Pistachio & Halva</h3>
           <p>Nutty, sweet, and irresistibly crunchy.</p>
         </div>
-        <img src="/mnt/data/1f378e9f-fadb-442e-8f76-3825f2712fb8.png" alt="Pistachio & Halva">
       </div>
     </div>
   </div>
