@@ -25,53 +25,66 @@
     }
     h1 {
       text-align: center;
-      font-size: 2.75rem;
+      font-size: 2.5rem;
       color: #1e2a38;
       margin-bottom: 0.2rem;
+      letter-spacing: 1px;
     }
-    h2 {
-      text-align: center;
-      font-size: 1rem;
-      font-weight: normal;
-      color: #555;
-      margin-bottom: 2.5rem;
-    }
-    .menu-section {
+    .divider {
       display: flex;
-      flex-direction: column;
-      gap: 2.25rem;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      color: #1e2a38;
+      margin-bottom: 2rem;
+    }
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      border-bottom: 1px solid #1e2a38;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem 1.5rem;
     }
     .menu-item {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 1rem;
     }
     .menu-item img {
-      width: 80px;
-      height: 80px;
+      width: 65px;
+      height: 65px;
       object-fit: contain;
       background-color: transparent;
     }
     .menu-item .text {
-      width: 75%;
+      flex: 1;
     }
     .menu-item h3 {
       margin: 0;
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #1e2a38;
     }
     .menu-item p {
       margin: 0.3rem 0 0;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #555;
+    }
+    @media (max-width: 768px) {
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <div class="menu-wrapper">
     <h1>CRUMB THEORY</h1>
-    <h2>BAKERY</h2>
-    <div class="menu-section">
+    <div class="divider">BAKERY</div>
+    <div class="menu-grid">
       <div class="menu-item">
         <img src="images/guava.jpg" alt="Guava Jam & Queso Fresco">
         <div class="text">
