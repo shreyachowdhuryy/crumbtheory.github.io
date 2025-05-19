@@ -17,7 +17,7 @@
     }
     .menu-wrapper {
       background-color: #f7e9d1;
-      width: 700px;
+      width: 750px;
       border: 3px solid #1e2a38;
       border-radius: 20px;
       padding: 2.5rem 2rem 3rem;
@@ -25,7 +25,7 @@
     }
     h1 {
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 2.75rem;
       color: #1e2a38;
       margin-bottom: 0.2rem;
       letter-spacing: 1px;
@@ -37,6 +37,7 @@
       gap: 1rem;
       color: #1e2a38;
       margin-bottom: 2rem;
+      font-size: 1rem;
     }
     .divider::before,
     .divider::after {
@@ -47,25 +48,28 @@
     .menu-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2.5rem 1.5rem;
+      gap: 2.5rem 3rem;
     }
     .menu-item {
       display: flex;
+      flex-direction: row;
       align-items: center;
-      gap: 1rem;
+      gap: 1.25rem;
     }
     .menu-item img {
-      width: 65px;
-      height: 65px;
+      width: 85px;
+      height: 85px;
       object-fit: contain;
       background-color: transparent;
+      border-radius: 8px;
+      border: 1px solid #ccc;
     }
     .menu-item .text {
       flex: 1;
     }
     .menu-item h3 {
       margin: 0;
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: #1e2a38;
     }
     .menu-item p {
@@ -76,6 +80,13 @@
     @media (max-width: 768px) {
       .menu-grid {
         grid-template-columns: 1fr;
+      }
+      .menu-item {
+        flex-direction: column;
+        text-align: center;
+      }
+      .menu-item .text {
+        max-width: 100%;
       }
     }
   </style>
