@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Crumb Theory Bakery</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
@@ -20,11 +20,11 @@
       color: #2e2e2e;
     }
 
-    /* Outer navy frame + inner cream panel */
+    /* Frame + panel */
     .menu-frame {
       background: #1e2a38;
       border-radius: 16px;
-      padding: 10px; /* border thickness */
+      padding: 10px;
     }
     .menu-panel {
       background: #f7e9d1;
@@ -34,12 +34,13 @@
       box-sizing: border-box;
     }
 
-    /* Arched heading */
+    /* Arc heading */
     .arc-heading {
       width: 100%;
-      height: 150px;
+      height: 200px;   /* extra height to avoid clipping */
       margin-bottom: 0.5rem;
     }
+
     /* Divider */
     .divider {
       display: flex;
@@ -59,7 +60,7 @@
     .divider::before { margin-right: 0.75rem; }
     .divider::after  { margin-left: 0.75rem; }
 
-    /* Menu list & items */
+    /* Menu items */
     .menu-list {
       display: grid;
       row-gap: 3rem;
@@ -75,16 +76,12 @@
     .menu-item:nth-child(even) .text {
       text-align: right;
     }
-
-    /* Pastry images */
     .menu-item img {
       height: 100px;
       width: auto;
       object-fit: contain;
       box-shadow: 4px 4px 12px rgba(0,0,0,0.15);
     }
-
-    /* Titles & descriptions */
     .menu-item .text h3 {
       margin: 0;
       font-size: 1.2rem;
@@ -103,89 +100,56 @@
   <div class="menu-frame">
     <div class="menu-panel">
 
-      <!-- Arched “CRUMB THEORY” -->
-      <svg
-        class="arc-heading"
-        viewBox="0 0 800 150"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-      >
+      <!-- Simplified arc: cubic Bézier for a smooth curve -->
+      <svg class="arc-heading" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <path id="arcPath" d="M50,140 A350,350 0 0,1 750,140" />
+          <path id="textArc"
+                d="M50,180 C200,20 600,20 750,180" />
         </defs>
-        <text
-          x="400" y="100"
-          text-anchor="middle"
-          font-family="Libre Baskerville"
-          font-size="54"
-          fill="#1e2a38"
-          letter-spacing="3"
-        >
-          <textPath href="#arcPath" xlink:href="#arcPath" startOffset="50%">
+        <text font-family="Libre Baskerville"
+              font-size="54"
+              fill="#1e2a38"
+              letter-spacing="3"
+              text-anchor="middle">
+          <textPath href="#textArc" startOffset="50%">
             CRUMB THEORY
           </textPath>
         </text>
       </svg>
 
-      <!-- Bakery divider -->
       <div class="divider">BAKERY</div>
 
-      <!-- Menu items -->
       <div class="menu-list">
-        <!-- 1. Guava Jam & Queso Fresco -->
         <div class="menu-item">
-          <img
-            src="menu_images/guava_jam_and_queso_fresco.png"
-            alt="Guava Jam & Queso Fresco"
-          />
+          <img src="menu_images/guava_jam_and_queso_fresco.png" alt="Guava Jam & Queso Fresco"/>
           <div class="text">
             <h3>Guava Jam & Queso Fresco</h3>
             <p>Sweet, tangy, and perfectly balanced.</p>
           </div>
         </div>
-
-        <!-- 2. Burnt Honey & Sea Salt -->
         <div class="menu-item">
-          <img
-            src="menu_images/burnt_honey_and_sea_salt.png"
-            alt="Burnt Honey & Sea Salt"
-          />
+          <img src="menu_images/burnt_honey_and_sea_salt.png" alt="Burnt Honey & Sea Salt"/>
           <div class="text">
             <h3>Burnt Honey & Sea Salt</h3>
             <p>Rich caramel notes with a hint of ocean salt.</p>
           </div>
         </div>
-
-        <!-- 3. Smoked Plum & Black Tea Cream -->
         <div class="menu-item">
-          <img
-            src="menu_images/smoked_plum_and_black_tea_cream.png"
-            alt="Smoked Plum & Black Tea Cream"
-          />
+          <img src="menu_images/smoked_plum_and_black_tea_cream.png" alt="Smoked Plum & Black Tea Cream"/>
           <div class="text">
             <h3>Smoked Plum & Black Tea Cream</h3>
             <p>Earthy, smoky, and soothing.</p>
           </div>
         </div>
-
-        <!-- 4. Yuzu Custard & Toasted Meringue -->
         <div class="menu-item">
-          <img
-            src="menu_images/yuzu_custard_and_toasted_meringue.png"
-            alt="Yuzu Custard & Toasted Meringue"
-          />
+          <img src="menu_images/yuzu_custard_and_toasted_meringue.png" alt="Yuzu Custard & Toasted Meringue"/>
           <div class="text">
             <h3>Yuzu Custard & Toasted Meringue</h3>
             <p>Bright citrus with a soft, toasted finish.</p>
           </div>
         </div>
-
-        <!-- 5. Pistachio & Halva -->
         <div class="menu-item">
-          <img
-            src="menu_images/pistachio_and_halva.png"
-            alt="Pistachio & Halva"
-          />
+          <img src="menu_images/pistachio_and_halva.png" alt="Pistachio & Halva"/>
           <div class="text">
             <h3>Pistachio & Halva</h3>
             <p>Nutty, sweet, and irresistibly crunchy.</p>
