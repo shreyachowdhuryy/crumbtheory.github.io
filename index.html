@@ -9,7 +9,7 @@
     rel="stylesheet"
   />
   <style>
-    /* Page + centering */
+    /* Page background & center */
     body {
       margin: 0;
       padding: 2rem;
@@ -20,11 +20,11 @@
       color: #2e2e2e;
     }
 
-    /* Frame & panel */
+    /* Outer navy frame + inner cream panel */
     .menu-frame {
       background: #1e2a38;
       border-radius: 16px;
-      padding: 10px;
+      padding: 10px; /* border thickness */
     }
     .menu-panel {
       background: #f7e9d1;
@@ -59,7 +59,7 @@
     .divider::before { margin-right: 0.75rem; }
     .divider::after  { margin-left: 0.75rem; }
 
-    /* Menu items */
+    /* Menu list & items */
     .menu-list {
       display: grid;
       row-gap: 3rem;
@@ -75,12 +75,16 @@
     .menu-item:nth-child(even) .text {
       text-align: right;
     }
+
+    /* Pastry images */
     .menu-item img {
       height: 100px;
       width: auto;
       object-fit: contain;
       box-shadow: 4px 4px 12px rgba(0,0,0,0.15);
     }
+
+    /* Titles & descriptions */
     .menu-item .text h3 {
       margin: 0;
       font-size: 1.2rem;
@@ -98,7 +102,8 @@
 <body>
   <div class="menu-frame">
     <div class="menu-panel">
-      <!-- SVG with both href and xlink:href -->
+
+      <!-- Arched “CRUMB THEORY” -->
       <svg
         class="arc-heading"
         viewBox="0 0 800 150"
@@ -116,54 +121,71 @@
           fill="#1e2a38"
           letter-spacing="3"
         >
-          <textPath
-            href="#arcPath"
-            xlink:href="#arcPath"
-            startOffset="50%"
-          >
+          <textPath href="#arcPath" xlink:href="#arcPath" startOffset="50%">
             CRUMB THEORY
           </textPath>
         </text>
       </svg>
 
+      <!-- Bakery divider -->
       <div class="divider">BAKERY</div>
 
+      <!-- Menu items -->
       <div class="menu-list">
+        <!-- 1. Guava Jam & Queso Fresco -->
         <div class="menu-item">
-          <img src="/mnt/data/A_photograph_showcases_a_guava_jam_and_queso_fresc.png"
-               alt="Guava Jam & Queso Fresco" />
+          <img
+            src="menu_images/guava_jam_and_queso_fresco.png"
+            alt="Guava Jam & Queso Fresco"
+          />
           <div class="text">
             <h3>Guava Jam & Queso Fresco</h3>
             <p>Sweet, tangy, and perfectly balanced.</p>
           </div>
         </div>
+
+        <!-- 2. Burnt Honey & Sea Salt -->
         <div class="menu-item">
-          <img src="/mnt/data/1f378e9f-fadb-442e-8f76-3825f2712fb8.png"
-               alt="Burnt Honey & Sea Salt" />
+          <img
+            src="menu_images/burnt_honey_and_sea_salt.png"
+            alt="Burnt Honey & Sea Salt"
+          />
           <div class="text">
             <h3>Burnt Honey & Sea Salt</h3>
             <p>Rich caramel notes with a hint of ocean salt.</p>
           </div>
         </div>
+
+        <!-- 3. Smoked Plum & Black Tea Cream -->
         <div class="menu-item">
-          <img src="/mnt/data/718107e3-d43f-40b2-ae30-5d711b12a16d.png"
-               alt="Smoked Plum & Black Tea Cream" />
+          <img
+            src="menu_images/smoked_plum_and_black_tea_cream.png"
+            alt="Smoked Plum & Black Tea Cream"
+          />
           <div class="text">
             <h3>Smoked Plum & Black Tea Cream</h3>
             <p>Earthy, smoky, and soothing.</p>
           </div>
         </div>
+
+        <!-- 4. Yuzu Custard & Toasted Meringue -->
         <div class="menu-item">
-          <img src="/mnt/data/35992784-2e40-46a7-a41c-0ed6c7f72a1d.png"
-               alt="Yuzu Custard & Toasted Meringue" />
+          <img
+            src="menu_images/yuzu_custard_and_toasted_meringue.png"
+            alt="Yuzu Custard & Toasted Meringue"
+          />
           <div class="text">
             <h3>Yuzu Custard & Toasted Meringue</h3>
             <p>Bright citrus with a soft, toasted finish.</p>
           </div>
         </div>
+
+        <!-- 5. Pistachio & Halva -->
         <div class="menu-item">
-          <img src="/mnt/data/c4747251-8969-4cd0-95bb-116a054055cf.png"
-               alt="Pistachio & Halva" />
+          <img
+            src="menu_images/pistachio_and_halva.png"
+            alt="Pistachio & Halva"
+          />
           <div class="text">
             <h3>Pistachio & Halva</h3>
             <p>Nutty, sweet, and irresistibly crunchy.</p>
