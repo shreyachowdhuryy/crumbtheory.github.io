@@ -20,20 +20,14 @@
       color: #2e2e2e;
     }
 
-    /* outer navy frame */
-    .menu-frame {
-      border: 10px solid #1e2a38;
-      border-radius: 16px;
-      padding: 0.5rem; /* space between border and content panel */
-    }
-
-    /* inner cream panel */
-    .menu-panel {
+    /* cream panel + navy frame via shadow */
+    .menu-wrapper {
       background: #f7e9d1;
-      border-radius: 8px;
-      padding: 2.5rem 2rem 3rem;
       width: 750px;
+      padding: 2.5rem 2rem 3rem;
       box-sizing: border-box;
+      border-radius: 16px;
+      box-shadow: 0 0 0 10px #1e2a38;
     }
 
     /* Title + divider */
@@ -105,54 +99,6 @@
 </head>
 
 <body>
-  <div class="menu-frame">
-    <div class="menu-panel">
-      <h1>Crumb Theory</h1>
-      <div class="divider">Bakery</div>
-      <div class="menu-grid">
-        <!-- repeat for each flavor -->
-        <div class="menu-item">
-          <img src="A_photograph_showcases_a_guava_jam_and_queso_fresc.png"
-               alt="Guava Jam & Queso Fresco" />
-          <div class="text">
-            <h3>Guava Jam & Queso Fresco</h3>
-            <p>Sweet, tangy, and perfectly balanced.</p>
-          </div>
-        </div>
-        <div class="menu-item">
-          <img src="1f378e9f-fadb-442e-8f76-3825f2712fb8.png"
-               alt="Burnt Honey & Sea Salt" />
-          <div class="text">
-            <h3>Burnt Honey & Sea Salt</h3>
-            <p>Rich caramel notes with a hint of ocean salt.</p>
-          </div>
-        </div>
-        <div class="menu-item">
-          <img src="718107e3-d43f-40b2-ae30-5d711b12a16d.png"
-               alt="Smoked Plum & Black Tea Cream" />
-          <div class="text">
-            <h3>Smoked Plum & Black Tea Cream</h3>
-            <p>Earthy, smoky, and soothing.</p>
-          </div>
-        </div>
-        <div class="menu-item">
-          <img src="35992784-2e40-46a7-a41c-0ed6c7f72a1d.png"
-               alt="Yuzu Custard & Toasted Meringue" />
-          <div class="text">
-            <h3>Yuzu Custard & Toasted Meringue</h3>
-            <p>Bright citrus with a soft, toasted finish.</p>
-          </div>
-        </div>
-        <div class="menu-item">
-          <img src="c4747251-8969-4cd0-95bb-116a054055cf.png"
-               alt="Pistachio & Halva" />
-          <div class="text">
-            <h3>Pistachio & Halva</h3>
-            <p>Nutty, sweet, and irresistibly crunchy.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+  <div class="menu-wrapper">
+    <h1>Crumb Theory</h1>
+    <div c
